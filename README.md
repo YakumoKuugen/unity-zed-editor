@@ -11,7 +11,16 @@
 
 ## 安装
 
-把整个 `com.sgame.ide.zed` 目录放到项目的 `Packages/` 下（嵌入式包，无需修改 `manifest.json`），
+方式一（推荐给团队共享）：在 `Packages/manifest.json` 的 `dependencies` 中加入 Git 地址
+
+```json
+"com.sgame.ide.zed": "https://yk-forgejo.yakumonas.fnos.net/YakumoKuugen/unity-zed-editor.git"
+```
+
+或在 Package Manager 里 **Add package from git URL…** 填入上面的地址（仓库为私有库，需要先配置好
+`fnos-git-auth` 或 Git 凭据）。
+
+方式二：把整个 `com.sgame.ide.zed` 目录放到项目的 `Packages/` 下（嵌入式包，无需修改 `manifest.json`），
 或用 Package Manager 的 **Add package from disk…** 选择 `package.json`。
 
 要求：Unity 2021.3+（编辑器平台专用程序集）。
